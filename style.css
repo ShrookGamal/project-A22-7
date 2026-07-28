@@ -672,3 +672,159 @@ body {
         font-size: 24px !important;
     }
 }
+/* --- تصميم الأزرار العائمة الجديد (The Dock) --- */
+.contact-dock {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    z-index: 999999;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.dock-item {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.dock-item.whatsapp { background: #25D366; }
+.dock-item.phone { background: #D4AF37; }
+
+.dock-separator {
+    height: 1px;
+    background: rgba(212, 175, 55, 0.2);
+    margin: 5px 10px;
+}
+
+.dock-label {
+    position: absolute;
+    right: 70px;
+    background: #1a1a1a;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.dock-item:hover .dock-label { opacity: 1; right: 65px; }
+.dock-item:hover { transform: scale(1.1); }
+@media (max-width: 768px) {
+    /* --- توسيط سكشن الخدمات والخط الأصفر --- */
+    .royal-services {
+        padding: 60px 20px !important;
+    }
+
+    .services-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* توسيط الكروت في الصفحة */
+        gap: 50px !important;
+    }
+
+    .royal-card {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* توسيط المحتوى داخل الكارت */
+        text-align: center !important;
+    }
+
+    .arch-frame-container {
+        margin: 0 auto 25px !important; /* توسيط الصورة */
+    }
+
+    .royal-content h3 {
+        width: 100%;
+        text-align: center !important;
+        position: relative;
+        display: block !important;
+    }
+
+    /* إصلاح الخط الأصفر تحت الكلام وتوسيطه */
+    .royal-content h3::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50% !important; /* البداية من المنتصف */
+        right: auto !important;
+        transform: translateX(-50%) !important; /* الرجوع بنصف طول الخط للسنتر */
+        width: 60px !important;
+        height: 3px;
+        background: #D4AF37;
+    }
+
+    .royal-content p {
+        text-align: center !important;
+        width: 100% !important;
+        padding: 0 10px !important;
+        margin-top: 15px !important;
+    }
+
+    /* --- ضبط السايد منيو (قصيرة وفي المنتصف) --- */
+    .menu-overlay {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .side-menu-card {
+        position: relative !important;
+        top: 0 !important;
+        transform: none !important; /* إلغاء أي تحريك قديم */
+        max-height: 40vh !important; /* طول قصير جداً وأنيق */
+        width: 85% !important;
+        border-radius: 30px !important;
+        padding: 25px !important;
+        overflow: hidden;
+    }
+
+    .mobile-item {
+        font-size: 1.1rem !important;
+        margin-bottom: 10px !important;
+        padding: 8px !important;
+    }
+}
+@media (max-width: 768px) {
+    /* الحل النهائي لتوسيط أيقونة الواتساب في الموبايل */
+    .dock-item.whatsapp {
+        display: grid !important;
+        place-items: center !important; /* توسيط رياضي في المركز */
+        width: 50px !important;
+        height: 50px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .dock-item.whatsapp i {
+        /* تصفير كل الخصائص التي تسبب الإزاحة */
+        display: block !important;
+        width: auto !important;
+        height: auto !important;
+        line-height: 1 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 26px !important; /* حجم الأيقونة */
+        text-align: center !important;
+        vertical-align: middle !important;
+    }
+}
