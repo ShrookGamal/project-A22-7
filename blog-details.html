@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدونة أبو يوسف الصعيدي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --gold: #D4AF37; --white: #ffffff; --dark: #1a1a1a; }
+        body { font-family: 'Cairo', sans-serif; background: #fdfbf7; margin: 0; }
+        
+        .hero-details { 
+            height: 70vh; position: relative; display: flex; 
+            align-items: center; justify-content: center; color: white; text-align: center;
+        }
+        .hero-details img { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            object-fit: cover; z-index: -1; filter: brightness(0.4); 
+        }
+
+        .home-back-btn {
+            position: absolute; top: 30px; right: 30px;
+            background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);
+            color: white; padding: 12px 25px; border-radius: 50px;
+            text-decoration: none; font-weight: bold; border: 1px solid var(--gold);
+            transition: 0.3s; z-index: 100;
+        }
+        .home-back-btn:hover { background: var(--gold); transform: scale(1.1); }
+
+        .content-card {
+            max-width: 1000px; margin: -150px auto 80px; background: white;
+            padding: 70px 50px; border-radius: 50px; box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+            position: relative; z-index: 10;
+        }
+        .post-meta { color: var(--gold); font-weight: 800; margin-bottom: 20px; display: block; letter-spacing: 2px; }
+        .post-title { font-size: 3rem; color: var(--dark); font-weight: 900; line-height: 1.3; margin-bottom: 40px; }
+        .main-text { font-size: 1.25rem; color: #444; line-height: 2.1; text-align: justify; }
+        .main-text h2 { color: var(--dark); border-right: 5px solid var(--gold); padding-right: 20px; margin: 50px 0 25px; }
+        .quote-box { background: #fcfaf5; padding: 30px; border-radius: 20px; border-right: 10px solid var(--gold); margin: 40px 0; font-style: italic; font-weight: 700; color: var(--dark); }
+        
+        .contact-abu-youssef { 
+            margin-top: 60px; padding: 40px; background: #1a1a1a; color: white; 
+            border-radius: 30px; text-align: center; 
+        }
+        .contact-abu-youssef h3 { color: var(--gold); font-size: 2rem; margin-bottom: 15px; }
+        .cta-btn { display: inline-block; background: var(--gold); color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 900; margin-top: 20px; transition: 0.3s; }
+        .cta-btn:hover { background: #B8860B; transform: translateY(-5px); }
+
+        @media (max-width: 768px) {
+            .content-card { margin-top: -80px; padding: 30px 20px; width: 92%; }
+            .post-title { font-size: 1.8rem; }
+            .hero-details { height: 50vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero-details">
+        <a href="index.html" class="home-back-btn"><i class="fas fa-home"></i> العودة للرئيسية</a>
+        <img id="post-img" src="" alt="">
+        <div class="hero-content">
+            <span class="post-meta">مقالات أبو يوسف الصعيدي</span>
+            <h1 id="hero-title"></h1>
+        </div>
+    </header>
+
+    <div class="content-card">
+        <h2 id="post-title" class="post-title"></h2>
+        <div id="post-body" class="main-text">
+        </div>
+
+        <div class="contact-abu-youssef">
+            <h3>هل تريد استشارة خاصة؟</h3>
+            <p>أبو يوسف الصعيدي وفريقه في خدمتك لتحويل حديقتك إلى تحفة فنية.</p>
+            <a href="https://wa.me/966545484071" class="cta-btn">تواصل عبر الواتساب الآن</a>
+        </div>
+    </div>
+
+    <script>
+        const blogData = {
+            "1": {
+                title: "أسرار الحفاظ على الشتلات الداخلية نضرة",
+                img: "images/blog1.png",
+                content: `
+                    <p>يعتبر نبات الظل من أرقى العناصر الديكورية في المنزل، ولكن يرى أبو يوسف الصعيدي أن الكثيرين يقتلون نباتاتهم بالحب الزائد (الإفراط في الري).</p>
+                    <div class="quote-box">"النبات يتحدث إليك، إذا ذبلت الأطراف فهو يحتاج رطوبة، وإذا اصفرت فهو يغرق في الماء" - أبو يوسف الصعيدي</div>
+                    <h2>أولاً: اختيار المكان الصحيح</h2>
+                    <p>ليست كل الزوايا مناسبة، النبات يحتاج لضوء منكسر وليس شمس محرقة. الإضاءة هي وقود النمو، وبدونها تفقد الأوراق لونها الذهبي أو الأخضر الزاهي.</p>
+                    <h2>ثانياً: خلطة التربة السرية</h2>
+                    <p>نحن في مشتلنا نستخدم خليطاً من البتموس والبيرلايت مع نسبة بسيطة من التربة الصعيدية الغنية، مما يضمن تصريفاً ممتازاً للماء وتغذية تدوم لأشهر.</p>
+                    <p>يجب عليك أيضاً تنظيف الأوراق بقطعة قماش مبللة مرة كل أسبوع لفتح مسام النبات ليتنفس بشكل أفضل.</p>
+                `
+            },
+            "2": {
+                title: "فن دمج الشلالات المائية في المساحات الصغيرة",
+                img: "images/blog2.png",
+                content: `
+                    <p>يعتقد البعض أن الشلالات تحتاج لقصور، ولكن أبو يوسف الصعيدي يثبت العكس بتصاميمه الذكية للمساحات المحدودة التي تعطي شعوراً بالاتساع والراحة.</p>
+                    <h2>تصميم الشلال الجداري</h2>
+                    <p>استخدام الجدران لتمرير المياه يوفر مساحة الأرضية. نستخدم الحجر الطبيعي الذي يمتص الصوت المزعج للمضخة ويبرز صوت خرير الماء الهادئ.</p>
+                    <div class="quote-box">"الماء في الحديقة يقلل من درجة الحرارة بنسبة تصل لـ 5 درجات، ويهدئ الأعصاب بعد يوم عمل طويل."</div>
+                    <h2>الإضاءة المغمورة</h2>
+                    <p>نصيحة أبو يوسف هي وضع إضاءة صفراء دافئة تحت مسقط الماء، مما يجعل الشلال يبدو كقطعة ذهبية منسابة في المساء، ليعطي فخامة لا تضاهى لمنزلك.</p>
+                `
+            },
+            "3": {
+                title: "دليل زراعة النخيل في المناطق الجافة",
+                img: "images/blog3.png",
+                content: `
+                    <p>النخيل هو رمز القوة والأصالة، وفي مشتل أبو يوسف الصعيدي، نعتبر غرس النخلة أمانة. المناخ الجاف يحتاج لأنواع معينة وطرق غرس خاصة.</p>
+                    <h2>اختيار الفسيلة</h2>
+                    <p>يجب التأكد من عمر الفسيلة وقوة جذورها قبل النقل. أبو يوسف يشرف بنفسه على تقليم الجريد وحماية "الجمارة" أثناء عملية الغرس لضمان عدم موت النخلة.</p>
+                    <div class="quote-box">"نحن لا نغرس نخلاً فقط، نحن نغرس تاريخاً يمتد لأجيال."</div>
+                    <h2>الري الأولي</h2>
+                    <p>في الأربعين يوماً الأولى، تحتاج النخلة لري يومي منتظم وبكميات محسوبة لتشجيع الجذور على التعمق في باطن الأرض بحثاً عن الثبات.</p>
+                `
+            },
+            "4": {
+                title: "كيفية اختيار نوع الثيل المناسب لحديقتك",
+                img: "images/blog4.png",
+                content: `
+                    <p>السؤال الذي يحير الجميع: هل أزرع ثيلاً طبيعياً أم أركب ثيلاً صناعياً؟ أبو يوسف الصعيدي يوضح لك أن الإجابة تعتمد على "وقتك" و "ميزانيتك".</p>
+                    <h2>الثيل الطبيعي (Cynodon)</h2>
+                    <p>يمتاز بقدرته على تبريد الجو وجماله الفائق ورائحته المنعشة، ولكنه يحتاج لقص وتسميد وكميات مياه كبيرة وشبكة ري أوتوماتيكية.</p>
+                    <div class="quote-box">"إذا كنت تحب الاعتناء بحديقتك بنفسك، فالطبيعي لا يعلى عليه، أما إذا كنت مشغولاً فالصناعي هو صديقك."</div>
+                    <h2>الثيل الصناعي عالي الجودة</h2>
+                    <p>نوفر أنواعاً تحاكي الطبيعي بنسبة 95%، وتتحمل دعس الأقدام ولعب الأطفال دون أن تتغير، وهي مثالية للاستراحات والمناطق التي يصعب وصول الماء إليها.</p>
+                `
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const postId = urlParams.get('id');
+
+        if (postId && blogData[postId]) {
+            const post = blogData[postId];
+            document.getElementById('post-img').src = post.img;
+            document.getElementById('hero-title').innerText = post.title;
+            document.getElementById('post-title').innerText = post.title;
+            document.getElementById('post-body').innerHTML = post.content;
+            document.title = post.title + " | أبو يوسف الصعيدي";
+        } else {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

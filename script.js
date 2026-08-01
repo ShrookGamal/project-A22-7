@@ -5,21 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-item, .mobile-item');
     const sections = document.querySelectorAll('section');
     const scrollBtn = document.getElementById('scroll-btn');
-
-    // 1. تشغيل زر الهامبرغر والاكس مع البلور
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('open');
         menuOverlay.classList.toggle('active');
-        
-        // منع السكرول عند فتح المنيو
         if(menuOverlay.classList.contains('active')) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = 'auto';
         }
     });
-
-    // 2. إغلاق القائمة عند الضغط على أي رابط
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('open');
@@ -27,16 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = 'auto';
         });
     });
-
-    // 3. تغيير شكل الناف بار عند السكرول (حل مشكلة وضوح النص)
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
-
-        // 4. نظام Scroll Spy للـ Active State
         let current = "";
         sections.forEach((section) => {
             const sectionTop = section.offsetTop;
@@ -53,8 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // 5. جعل سهم الايفون يعمل بسلاسة
     scrollBtn.addEventListener('click', (e) => {
         e.preventDefault();
         const targetId = scrollBtn.getAttribute('href');
@@ -63,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-// مصفوفة الأنيميشن والعدادات لسكشن من نحن
 const initAboutSection = () => {
     const section = document.querySelector('.about-section');
     const counters = document.querySelectorAll('.stat-number');
@@ -74,14 +61,11 @@ const initAboutSection = () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // تفعيل ظهور العناصر
                 entry.target.classList.add('active');
-
-                // تشغيل عداد الأرقام إذا كان هذا العنصر هو الـ stats-grid
                 if (entry.target.classList.contains('stats-grid')) {
                     counters.forEach(counter => {
                         const target = +counter.getAttribute('data-target');
-                        const duration = 2000; // مدة الأنيميشن بالملي ثانية
+                        const duration = 2000; 
                         const increment = target / (duration / 16);
                         
                         let currentCount = 0;
@@ -100,23 +84,17 @@ const initAboutSection = () => {
             }
         });
     }, countOptions);
-
-    // مراقبة العناصر للظهور
     revealElements.forEach(el => observer.observe(el));
     if(document.querySelector('.stats-grid')) {
         observer.observe(document.querySelector('.stats-grid'));
     }
 };
-
-// استدعاء الوظيفة
 initAboutSection();
-// نظام فلترة معرض الأعمال
 const filterButtons = document.querySelectorAll('.filter-btn');
 const portfolioItems = document.querySelectorAll('.portfolio-item');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // إزالة الكلاس active من الأزرار
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
 

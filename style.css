@@ -17,8 +17,6 @@ body {
     background-color: var(--white);
     overflow-x: hidden;
 }
-
-/* --- الناف بار الاحترافي --- */
 #main-header {
     position: fixed;
     top: 25px;
@@ -42,8 +40,6 @@ body {
     align-items: center;
     transition: var(--transition);
 }
-
-/* ستايل الناف بار عند السكرول */
 .glass-nav.scrolled {
     background: rgba(255, 255, 255, 0.9);
     border-color: var(--gold);
@@ -64,8 +60,6 @@ body {
     border-radius: 30px; transition: var(--transition);
 }
 .glass-nav.scrolled .nav-item { color: var(--dark); }
-
-/* الـ Active State الخارق */
 .nav-item.active {
     background: var(--gold);
     color: var(--white) !important;
@@ -81,8 +75,6 @@ body {
     transition: var(--transition);
 }
 .call-btn-desktop:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3); }
-
-/* --- الهامبرغر وزر X --- */
 .hamburger {
     display: none; width: 35px; height: 25px;
     flex-direction: column; justify-content: space-between;
@@ -96,8 +88,6 @@ body {
 .hamburger.open .bar:nth-child(1) { transform: translateY(10px) rotate(45deg); }
 .hamburger.open .bar:nth-child(2) { opacity: 0; }
 .hamburger.open .bar:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
-
-/* --- القائمة الجانبية الجديدة --- */
 .menu-overlay {
     position: fixed; top: 0; left: 0;
     width: 100%; height: 100vh;
@@ -130,8 +120,6 @@ body {
     box-shadow: 0 0 20px var(--gold);
     transform: scale(1.1);
 }
-
-/* --- سكشن الهيرو --- */
 .hero {
     height: 100vh; display: flex; align-items: center; justify-content: center;
     position: relative; overflow: hidden; text-align: center;
@@ -178,47 +166,35 @@ body {
     text-decoration: none; display: inline-block;
     animation: bounce 2s infinite;
 }
-
-/* --- Animations --- */
 @keyframes slowZoom { from { transform: scale(1); } to { transform: scale(1.2); } }
 @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(15px); } }
 @keyframes spinIcon { from { transform: rotate(0); } to { transform: rotate(360deg); } }
 @keyframes titleIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-/* --- Responsive --- */
 @media (max-width: 991px) {
     .nav-links, .call-btn-desktop { display: none; }
     .hamburger { display: flex; }
     #main-header { top: 15px; }
 }
-
-/* انيميشنات مخصصة للعناصر */
 .fade-in-up { animation: fadeInUp 0.8s ease-out both; }
 .delay-1 { animation-delay: 0.3s; }
 .delay-2 { animation-delay: 0.6s; }
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 .hero-content {
-    margin-top: 140px; /* ارفعي الرقم أو قلليه حسب الرغبة */
+    margin-top: 140px; 
 }
-
-/* لضمان التنسيق في الموبايل */
 @media (max-width: 991px) {
     .hero-content {
         margin-top: 80px;
     }
 }
-/* --- سكشن من نحن - النسخة الملكية المطورة --- */
 .about-section {
     padding: 120px 5%;
     position: relative;
-    background: #ffffff; /* خلفية بيضاء صريحة لضمان التباين */
+    background: #ffffff; 
     overflow: hidden;
 }
-
 .about-wrapper { max-width: 1200px; margin: 0 auto; z-index: 2; position: relative; }
-
-/* العناوين ووضوح كلمة الفخامة */
 .about-header { text-align: center; margin-bottom: 70px; }
 .sub-title { 
     color: var(--gold); 
@@ -232,11 +208,9 @@ body {
 .main-title { 
     font-size: clamp(2rem, 5vw, 3.5rem); 
     font-weight: 900; 
-    color: #222; /* لون داكن للعنوان لضمان الوضوح */
+    color: #222;
     line-height: 1.3;
 }
-
-/* حل مشكلة كلمة الفخامة: تدرج ذهبي واضح جداً */
 .gold-gradient { 
     background: linear-gradient(to right, #B8860B, #D4AF37); 
     -webkit-background-clip: text; 
@@ -253,13 +227,11 @@ body {
 
 .about-p { 
     font-size: 1.2rem; 
-    color: #444; /* لون رمادي داكن واضح */
+    color: #444; 
     max-width: 850px; 
     margin: 0 auto; 
     line-height: 1.9; 
 }
-
-/* الإحصائيات - Glassmorphism وضوح تام */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -286,8 +258,6 @@ body {
 .stat-icon { font-size: 2.8rem; color: var(--gold); margin-bottom: 15px; }
 .stat-number { font-size: 3.2rem; font-weight: 900; color: #1a1a1a; margin-bottom: 5px; }
 .stat-text { font-weight: 700; color: #666; font-size: 1.1rem; }
-
-/* الكروت التفاعلية - حل مشكلة اختفاء الكلام */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -305,28 +275,22 @@ body {
     z-index: 1;
     text-align: center;
 }
-
-/* المحتوى الافتراضي (قبل الـ Hover) */
 .feature-glass-box h4 { color: #222; font-size: 1.6rem; margin-bottom: 15px; transition: 0.4s; }
 .feature-glass-box p { color: #555; line-height: 1.7; transition: 0.4s; }
 .gold-icon { font-size: 3.5rem; color: var(--gold); margin-bottom: 20px; transition: 0.4s; }
-
-/* تأثير الـ Hover المبتكر */
 .feature-glass-box::after {
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
     background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
     z-index: -1;
-    transform: translateY(100%); /* تبدأ من الأسفل */
+    transform: translateY(100%);
     transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .feature-glass-box:hover::after {
-    transform: translateY(0); /* تملأ الكارت */
+    transform: translateY(0); 
 }
-
-/* تغيير لون النص للأبيض فقط عند الـ Hover */
 .feature-glass-box:hover h4,
 .feature-glass-box:hover p,
 .feature-glass-box:hover .gold-icon {
@@ -337,12 +301,8 @@ body {
     transform: translateY(-15px) scale(1.02);
     box-shadow: 0 20px 40px rgba(184, 134, 11, 0.3);
 }
-
-/* الأنيميشن التعريفي للسكشن */
 .section-reveal { opacity: 0; transform: translateY(60px); transition: 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67); }
 .section-reveal.active { opacity: 1; transform: translateY(0); }
-
-/* أوراق شجر خلفية خفيفة جداً للجمالية */
 .bg-leaf {
     position: absolute;
     font-size: 15rem;
@@ -352,10 +312,9 @@ body {
 }
 .leaf-right { top: -50px; right: -50px; transform: rotate(-20deg); }
 .leaf-left { bottom: -50px; left: -50px; transform: rotate(160deg); }
-/* --- سكشن الخدمات الملكي --- */
 .royal-services {
     padding: 120px 5%;
-    background-color: #fcfaf5; /* لون شامبين ملكي ناعم */
+    background-color: #fcfaf5; 
     position: relative;
 }
 
@@ -394,8 +353,6 @@ body {
     line-height: 2;
     font-weight: 400;
 }
-
-/* تصميم الجريد والكروت */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -407,8 +364,6 @@ body {
     transition: var(--transition);
     text-align: center;
 }
-
-/* الفريم المقوس (النافذة الملكية) */
 .arch-frame-container {
     position: relative;
     width: 280px;
@@ -420,7 +375,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-radius: 150px 150px 20px 20px; /* قوس من الأعلى */
+    border-radius: 150px 150px 20px 20px; 
     z-index: 2;
     position: relative;
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
@@ -432,8 +387,6 @@ body {
     object-fit: cover;
     transition: transform 1s ease;
 }
-
-/* الإطار الذهبي العائم */
 .floating-gold-border {
     position: absolute;
     top: -15px;
@@ -454,8 +407,6 @@ body {
 }
 
 .royal-card:hover .arch-frame img { transform: scale(1.15); }
-
-/* محتوى الخدمة */
 .royal-content h3 {
     font-size: 1.8rem;
     font-weight: 800;
@@ -481,14 +432,11 @@ body {
     font-size: 1.1rem;
     text-align: justify;
 }
-
-/* Responsive */
 @media (max-width: 480px) {
     .arch-frame-container { width: 220px; height: 300px; }
     .royal-title { font-size: 2rem; }
     .royal-content p { font-size: 1rem; text-align: center; }
 }
-/* --- معرض الأعمال --- */
 .portfolio-section { padding: 100px 5%; background: #fdfdfd; }
 
 .portfolio-filter {
@@ -537,10 +485,7 @@ body {
 }
 
 .portfolio-item:hover { transform: scale(1.02); }
-
-/* --- حلول الموبايل (الجذري) --- */
 @media (max-width: 768px) {
-    /* 1. تصغير كلام الهيرو */
     .hero-title {
         font-size: 2.2rem !important;
         line-height: 1.3 !important;
@@ -550,8 +495,6 @@ body {
         font-size: 1rem !important;
         padding: 0 10px;
     }
-
-    /* 2. الإحصائيات: كل واحدة في سطر */
     .stats-grid {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
@@ -560,8 +503,6 @@ body {
     .stat-card {
         padding: 30px 15px !important;
     }
-
-    /* 3. سكشن من نحن موبايل */
     .about-section {
         padding: 60px 5% !important;
     }
@@ -569,8 +510,6 @@ body {
     .main-title {
         font-size: 1.8rem !important;
     }
-
-    /* 4. معرض الأعمال موبايل */
     .portfolio-grid {
         grid-template-columns: 1fr !important;
     }
@@ -578,26 +517,22 @@ body {
     .portfolio-item {
         height: 250px !important;
     }
-
-    /* 5. الأزرار العائمة في الموبايل (تصغير قليلاً) */
     .fab {
         width: 50px;
         height: 50px;
         font-size: 20px;
     }
 }
-/* توسيط عناوين معرض الأعمال */
 .portfolio-section .section-header {
-    text-align: center; /* توسيط النص */
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* توسيط العناصر إذا كانت Flex */
+    align-items: center; 
     justify-content: center;
     margin-bottom: 50px;
 }
-
 .portfolio-section .gold-badge {
-    display: inline-block; /* لضمان التوسط */
+    display: inline-block; 
     margin-bottom: 15px;
 }
 
@@ -605,7 +540,6 @@ body {
     text-align: center;
     margin: 0 auto;
 }
-/* --- ستايل الأزرار العائمة الاحترافي --- */
 .fixed-action-container {
     position: fixed !important;
     bottom: 30px !important;
@@ -613,9 +547,8 @@ body {
     display: flex !important;
     flex-direction: column !important;
     gap: 15px !important;
-    z-index: 999999 !important; /* أعلى طبقة في الموقع */
+    z-index: 999999 !important; 
 }
-
 .luxury-float-btn {
     width: 65px !important;
     height: 65px !important;
@@ -631,24 +564,16 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.2) !important;
     backdrop-filter: blur(5px) !important;
 }
-
-/* زر الواتساب */
 .wa-btn {
     background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
 }
-
-/* زر الاتصال الذهبي */
 .call-btn {
     background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%) !important;
 }
-
-/* أنيميشن عند الوقوف بالماوس */
 .luxury-float-btn:hover {
     transform: scale(1.1) translateY(-5px) rotate(10deg) !important;
     box-shadow: 0 15px 30px rgba(0,0,0,0.4) !important;
 }
-
-/* أنيميشن نبض خفيف لشد الانتباه */
 .luxury-float-btn {
     animation: pulseBtn 2s infinite !important;
 }
@@ -658,8 +583,6 @@ body {
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
 }
-
-/* ضبط الموبايل لضمان عدم الاختفاء */
 @media (max-width: 768px) {
     .fixed-action-container {
         bottom: 20px !important;
@@ -672,7 +595,6 @@ body {
         font-size: 24px !important;
     }
 }
-/* --- تصميم الأزرار العائمة الجديد (The Dock) --- */
 .contact-dock {
     position: fixed;
     bottom: 25px;
@@ -729,7 +651,6 @@ body {
 .dock-item:hover .dock-label { opacity: 1; right: 65px; }
 .dock-item:hover { transform: scale(1.1); }
 @media (max-width: 768px) {
-    /* --- توسيط سكشن الخدمات والخط الأصفر --- */
     .royal-services {
         padding: 60px 20px !important;
     }
@@ -737,61 +658,52 @@ body {
     .services-grid {
         display: flex !important;
         flex-direction: column !important;
-        align-items: center !important; /* توسيط الكروت في الصفحة */
+        align-items: center !important;
         gap: 50px !important;
     }
-
     .royal-card {
         width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: center !important; /* توسيط المحتوى داخل الكارت */
+        align-items: center !important; 
         text-align: center !important;
     }
-
     .arch-frame-container {
-        margin: 0 auto 25px !important; /* توسيط الصورة */
+        margin: 0 auto 25px !important; 
     }
-
     .royal-content h3 {
         width: 100%;
         text-align: center !important;
         position: relative;
         display: block !important;
     }
-
-    /* إصلاح الخط الأصفر تحت الكلام وتوسيطه */
     .royal-content h3::after {
         content: '';
         position: absolute;
         bottom: -8px;
-        left: 50% !important; /* البداية من المنتصف */
+        left: 50% !important; 
         right: auto !important;
-        transform: translateX(-50%) !important; /* الرجوع بنصف طول الخط للسنتر */
+        transform: translateX(-50%) !important; 
         width: 60px !important;
         height: 3px;
         background: #D4AF37;
     }
-
     .royal-content p {
         text-align: center !important;
         width: 100% !important;
         padding: 0 10px !important;
         margin-top: 15px !important;
     }
-
-    /* --- ضبط السايد منيو (قصيرة وفي المنتصف) --- */
     .menu-overlay {
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
     }
-
     .side-menu-card {
         position: relative !important;
         top: 0 !important;
-        transform: none !important; /* إلغاء أي تحريك قديم */
-        max-height: 40vh !important; /* طول قصير جداً وأنيق */
+        transform: none !important; 
+        max-height: 40vh !important; 
         width: 85% !important;
         border-radius: 30px !important;
         padding: 25px !important;
@@ -805,26 +717,540 @@ body {
     }
 }
 @media (max-width: 768px) {
-    /* الحل النهائي لتوسيط أيقونة الواتساب في الموبايل */
     .dock-item.whatsapp {
         display: grid !important;
-        place-items: center !important; /* توسيط رياضي في المركز */
+        place-items: center !important; 
         width: 50px !important;
         height: 50px !important;
         padding: 0 !important;
         margin: 0 !important;
     }
-
     .dock-item.whatsapp i {
-        /* تصفير كل الخصائص التي تسبب الإزاحة */
         display: block !important;
         width: auto !important;
         height: auto !important;
         line-height: 1 !important;
         margin: 0 !important;
         padding: 0 !important;
-        font-size: 26px !important; /* حجم الأيقونة */
+        font-size: 26px !important;
         text-align: center !important;
         vertical-align: middle !important;
+    }
+}
+.expert-blog {
+    padding: 120px 5%;
+    background-color: #fdfbf7; 
+    position: relative;
+}
+.blog-main-header {
+    text-align: center; 
+    max-width: 800px;
+    margin: 0 auto 80px;
+}
+.expert-tag { color: var(--gold); font-weight: 800; letter-spacing: 3px; font-size: 0.9rem; }
+.blog-title { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; margin: 15px 0; color: #1a1a1a; }
+.divider-gold { width: 80px; height: 4px; background: var(--gold); margin: 0 auto 25px; border-radius: 10px; }
+.blog-intro { font-size: 1.15rem; color: #555; line-height: 1.8; }
+.refined-blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px;
+    max-width: 1100px; 
+    margin: 0 auto;
+}
+.modern-blog-card {
+    background: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.card-media { position: relative; height: 260px; overflow: hidden; }
+.card-media img { width: 100%; height: 100%; object-fit: cover; transition: 1s ease; }
+.category-pill {
+    position: absolute; bottom: 15px; left: 15px;
+    background: var(--gold); color: white; padding: 5px 15px;
+    border-radius: 8px; font-size: 0.85rem; font-weight: bold;
+}
+.card-body { padding: 35px; text-align: right; }
+.card-body h3 { font-size: 1.5rem; color: #1a1a1a; margin-bottom: 15px; font-weight: 800; line-height: 1.4; }
+.card-body p { color: #666; line-height: 1.7; margin-bottom: 25px; font-size: 1rem; }
+.btn-read-more {
+    color: var(--gold); text-decoration: none; font-weight: 900;
+    display: flex; align-items: center; gap: 8px; transition: 0.3s;
+    font-size: 1rem;
+}
+.modern-blog-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15); }
+.modern-blog-card:hover .card-media img { transform: scale(1.1); }
+.btn-read-more:hover { gap: 12px; color: #B8860B; }
+@media (max-width: 768px) {
+    .refined-blog-grid { grid-template-columns: 1fr; }
+    .card-media { height: 220px; }
+}
+.creative-why-us {
+    position: relative;
+    padding: 150px 5%;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.why-us-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('images/pexels-jessef11-732547.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px) brightness(0.8); 
+    z-index: -1;
+    transform: scale(1.1);
+}
+.why-us-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, rgba(0,0,0,0.8) 100%);
+    z-index: -1;
+}
+
+.why-us-header { text-align: center; margin-bottom: 80px; color: white; }
+.superior-tag { color: var(--gold); font-weight: 800; letter-spacing: 5px; text-transform: uppercase; }
+.superior-title { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin: 20px 0; }
+.superior-desc { max-width: 800px; margin: 0 auto; font-size: 1.2rem; opacity: 0.9; line-height: 1.8; }
+.genius-layout {
+    position: relative;
+    height: 700px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.floating-bubble {
+    position: absolute;
+    width: 320px;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+.bubble-inner {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 40px;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; 
+    color: white;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    animation: floatBubble 6s infinite ease-in-out;
+}
+
+.bubble-inner i { font-size: 3rem; color: var(--gold); margin-bottom: 20px; display: block; }
+.bubble-inner h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--gold); }
+.bubble-inner p { font-size: 0.95rem; line-height: 1.6; opacity: 0.8; }
+.bubble-1 { top: 0; right: 5%; }
+.bubble-2 { top: 15%; left: 5%; animation-delay: -1.5s; }
+.bubble-3 { bottom: 10%; right: 15%; animation-delay: -3s; }
+.bubble-4 { bottom: 0; left: 15%; animation-delay: -4.5s; }
+@keyframes floatBubble {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(3deg); }
+}
+.floating-bubble:hover { z-index: 10; transform: scale(1.1); }
+.floating-bubble:hover .bubble-inner {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--gold);
+    box-shadow: 0 30px 60px rgba(212, 175, 55, 0.2);
+}
+@media (max-width: 991px) {
+    .genius-layout {
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .floating-bubble {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        width: 100% !important;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .bubble-inner { border-radius: 30px; } 
+}
+.creative-why-us {
+    text-align: center !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; 
+    justify-content: center !important;
+}
+.why-us-header {
+    width: 100% !important;
+    max-width: 800px !important;
+    margin: 0 auto 60px auto !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+.genius-layout {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(300px, 400px)) !important; 
+    gap: 40px !important;
+    width: 100% !important;
+    max-width: 1000px !important; 
+    margin: 0 auto !important; 
+    justify-content: center !important; 
+    align-content: center !important;
+    position: relative !important;
+    height: auto !important; 
+}
+.floating-bubble {
+    position: relative !important; 
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+.bubble-inner {
+    width: 100% !important;
+    max-width: 350px !important; 
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; 
+    justify-content: center !important;
+}
+@media (max-width: 991px) {
+    .genius-layout {
+        grid-template-columns: 1fr !important; 
+        max-width: 450px !important;
+    }
+    
+    .bubble-inner {
+        max-width: 100% !important;
+    }
+}
+.dark-contact-section {
+    padding: 120px 5%;
+    background: radial-gradient(circle at center, #001f03 0%, #222e1e 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-white { color: white !important; }
+.contact-subtitle { opacity: 0.7; max-width: 600px; margin: 0 auto 60px; text-align: center; }
+
+.contact-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.group-label {
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-right: 3px solid var(--gold);
+    padding-right: 15px;
+}
+
+.phone-group { margin-bottom: 40px; }
+
+.action-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 25px 15px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-card i { font-size: 2rem; transition: 0.3s; }
+.contact-card span { font-weight: 800; font-size: 1.1rem; }
+.contact-card small { opacity: 0.6; font-size: 0.9rem; }
+.call-card:hover { background: rgba(212, 175, 55, 0.15); border-color: var(--gold); transform: translateY(-5px); }
+.call-card:hover i { color: var(--gold); transform: scale(1.2); }
+.wa-card:hover { background: rgba(37, 211, 102, 0.1); border-color: #25D366; transform: translateY(-5px); }
+.wa-card:hover i { color: #25D366; transform: scale(1.2); }
+.address-card {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
+    padding: 30px;
+    border-radius: 25px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.address-icon {
+    width: 60px; height: 60px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; color: black;
+}
+
+.address-text h4 { color: var(--gold); margin-bottom: 5px; font-size: 1.2rem; }
+.address-text p { font-size: 1rem; opacity: 0.8; line-height: 1.5; }
+.map-side { height: 100%; min-height: 500px; }
+.map-frame {
+    width: 100%; height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+@media (max-width: 991px) {
+    .contact-main-grid { grid-template-columns: 1fr; }
+    .map-side { min-height: 400px; order: 2; }
+    .action-cards { grid-template-columns: 1fr; } 
+}
+.contact-header {
+    text-align: center !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 auto 60px auto !important; 
+}
+.contact-header .gold-badge {
+    display: inline-block !important; 
+    margin-bottom: 15px !important;
+}
+
+.contact-header .main-title {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 10px auto !important;
+}
+
+.contact-header .contact-subtitle {
+    width: 100% !important;
+    max-width: 750px !important; 
+    text-align: center !important;
+    margin: 0 auto !important;
+    opacity: 0.8;
+}
+.luxury-footer {
+    background-color: #0d0d0d;
+    color: #cccccc;
+    padding: 80px 0 30px;
+    position: relative;
+    overflow: hidden;
+    border-top: 2px solid var(--gold);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr; 
+    gap: 40px;
+    margin-bottom: 60px;
+    padding: 0 5%;
+}
+
+.footer-col h4 {
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.underline-gold {
+    width: 40px;
+    height: 3px;
+    background: var(--gold);
+    margin-bottom: 25px;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+.footer-col:hover .underline-gold {
+    width: 70px;
+}
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.footer-logo h3 {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 900;
+    margin: 0;
+}
+
+.footer-desc {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: #999999;
+    margin-bottom: 25px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background: var(--gold);
+    color: black;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #999999;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.footer-col ul li a:hover {
+    color: var(--gold);
+    transform: translateX(-5px); 
+}
+.contact-info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #999999;
+    line-height: 1.6;
+}
+
+.contact-info-list li i {
+    color: var(--gold);
+    margin-top: 5px;
+}
+.footer-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+    margin: 0 5% 30px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 0 5%;
+    font-size: 0.95rem;
+}
+
+.copyright-text {
+    margin-bottom: 10px;
+    color: #888888;
+}
+
+.developer-text {
+    font-size: 1rem;
+    color: #aaa;
+    font-weight: 600;
+}
+
+.gmt-link {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    padding: 2px 8px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.gmt-link:hover {
+    color: white;
+    background: var(--gold);
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+@media (max-width: 991px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr; 
+        gap: 30px;
+    }
+}
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; 
+        text-align: center;
+    }
+    
+    .footer-col {
+        margin-bottom: 20px;
+    }
+
+    .underline-gold {
+        margin: 10px auto 20px; 
+    }
+
+    .footer-logo {
+        justify-content: center; 
+    }
+
+    .footer-socials {
+        justify-content: center; 
+        margin-bottom: 20px;
+    }
+    .contact-info-list li {
+        justify-content: center; 
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .footer-col ul li a:hover {
+        transform: scale(1.05); 
+    }
+}
+@media (max-width: 768px) {
+    .side-menu-card {
+        max-height: 65vh !important; 
     }
 }
