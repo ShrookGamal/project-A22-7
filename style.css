@@ -1254,3 +1254,11 @@ body {
         max-height: 65vh !important; 
     }
 }
+@media (max-width: 768px) {
+    .logo-name {
+        font-size: 1rem !important;
+    }
+    .logo-icon {
+        font-size: 1.4rem !important;
+    }
+}
